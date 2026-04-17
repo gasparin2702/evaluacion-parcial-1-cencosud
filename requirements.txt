@@ -1,6 +1,10 @@
-openai
-langchain
-langchain-openai
-faiss-cpu
-python-dotenv
-tiktoken
+langchain==0.2.14
+langchain-core==0.2.32
+langchain-community==0.2.12
+langchain-openai==0.1.22
+faiss-cpu==1.8.0
+python-dotenv==1.0.1
+tiktoken==0.7.0
+beautifulsoup4==4.12.3
+requests==2.32.3
+langchain-text-splitters==0.2.2
