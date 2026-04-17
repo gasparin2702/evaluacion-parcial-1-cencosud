@@ -35,3 +35,11 @@ def preparar_sistema_hibrido():
 
 if __name__ == "__main__":
     preparar_sistema_hibrido()
+
+
+
+    # despues de docs_externos = loader_externo.load()
+print("verificando fuente externa:")
+print(f"url cargada: {docs_externos[0].metadata['source']}")
+print(f"titulo de la pagina: {docs_externos[0].metadata.get('title', 'no hay titulo')}")
+print(f"primeros 200 caracteres: {docs_externos[0].page_content[:200]}")
