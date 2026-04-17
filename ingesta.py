@@ -27,9 +27,11 @@ def preparar_sistema_hibrido():
     chunks = splitter.split_documents(todos_los_docs)
     
     # 4. vectorizacion y almacenamiento 
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-    vector_store = FAISS.from_documents(chunks, embeddings)
-    vector_store.save_local("faiss_index_cencosud")
+    embeddings = OpenAIEmbeddings(
+    model="text-embedding-3-small",
+    api_key=os.getenv("GITHUB_TOKEN"),
+    base_url=os.getenv("GITHUB_BASE_URL")
+)
     
     print(f"sistema nutrido con {len(docs_internos)} archivos internos y 1 fuente legal externa")
 
